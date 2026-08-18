@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SwiftTab Privacy Policy</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --border: #e4e6ea;
+    --text: #24292f;
+    --muted: #57606a;
+    --accent: #4d7eff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  h1 { font-size: 24px; margin: 0; }
+  .lang-toggle {
+    display: flex; gap: 6px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 3px;
+  }
+  .lang-toggle button {
+    appearance: none; border: 0; background: transparent; color: var(--muted);
+    font-size: 13px; padding: 5px 12px; border-radius: 6px; cursor: pointer; font-family: inherit;
+  }
+  .lang-toggle button.active { background: var(--accent); color: #fff; }
+  .meta { color: var(--muted); font-size: 13px; margin: 10px 0 28px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 22px 26px; margin-bottom: 16px;
+  }
+  .card h2 { font-size: 17px; margin: 0 0 10px; }
+  .card h3 { font-size: 15px; margin: 18px 0 6px; }
+  .card p { margin: 6px 0; }
+  .card ul { margin: 6px 0 6px 22px; padding: 0; }
+  .card li { margin: 4px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 10px 0; }
+  th, td { text-align: left; border: 1px solid var(--border); padding: 8px 10px; vertical-align: top; }
+  th { background: #f0f2f5; }
+  code {
+    background: #f0f2f5; border-radius: 4px; padding: 1px 5px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px;
+  }
+  .no-collect {
+    background: #eef4ff; border: 1px solid #cfe0ff; border-radius: 10px; padding: 14px 18px;
+  }
+  .muted { color: var(--muted); font-size: 13.5px; }
+  [lang] { display: none; }
+  [lang].active { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>SwiftTab — Privacy Policy / 隐私政策</h1>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button id="btn-en" class="active" data-lang="en">English</button>
+      <button id="btn-zh" data-lang="zh">中文</button>
+    </div>
+  </header>
+  <p class="meta active" lang="en" id="meta-en">Effective date: August 18, 2026 · Last updated: August 18, 2026</p>
+  <p class="meta" lang="zh" id="meta-zh">生效日期:2026 年 8 月 18 日 · 最后更新:2026 年 8 月 18 日</p>
+
+  <!-- ============ ENGLISH ============ -->
+  <div lang="en" class="active" id="en">
+    <section class="card">
+      <h2>Overview</h2>
+      <p>
+        SwiftTab is a browser tab switcher extension. It is designed to work entirely on your device.
+        This privacy policy explains what data the extension handles, how it is stored, and how you stay in control.
+        The short version: <b>SwiftTab does not collect, transmit, sell, or share any personal data.</b>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>What the extension does</h2>
+      <p>SwiftTab lists your open tabs and lets you switch between them quickly, using thumbnails, search and keyboard shortcuts. All of this happens locally in your browser.</p>
+      <h3>Data handled locally on your device</h3>
+      <table>
+        <tr><th>Data</th><th>How it is used</th><th>Storage</th></tr>
+        <tr><td>Tab titles, URLs, icons, pinned/active state</td><td>Displayed in the switcher panel so you can recognize and switch to a tab</td><td>Memory only, not persisted</td></tr>
+        <tr><td>Page thumbnails (screenshots of the visible tab)</td><td>Preview shown in the switcher panel</td><td>Memory + <code>chrome.storage.session</code>, cleared when the browser session ends</td></tr>
+        <tr><td>Bookmarks (read-only)</td><td>Mark bookmarked tabs with a ★</td><td>Read only, never modified or stored</td></tr>
+        <tr><td>Recently closed tab sessions</td><td>Enable the "restore last closed tab" feature</td><td>Read only via the browser's sessions API</td></tr>
+        <tr><td>User settings (layout, theme, language, Vim mode, etc.)</td><td>Persist your preferences</td><td><code>chrome.storage.sync</code></td></tr>
+        <tr><td>Last 20 search queries</td><td>Show recent searches; can be cleared anytime from the options page</td><td><code>chrome.storage.local</code></td></tr>
+      </table>
+      <p class="muted">
+        <code>chrome.storage.sync</code> follows Chrome's standard sync behavior: if you have Chrome sync enabled, your settings may sync across your own devices through your Google account, as with any extension. Settings are never sent to the extension developer's servers.
+      </p>
+    </section>
+
+    <section class="card no-collect">
+      <h2>What the extension does NOT do</h2>
+      <ul>
+        <li><b>No personal information collected.</b> SwiftTab does not collect your name, email, or any account information.</li>
+        <li><b>No browsing history logging.</b> It lists the tabs you currently have open, only while the switcher is shown.</li>
+        <li><b>No network requests.</b> The extension makes no requests to any server owned by the developer.</li>
+        <li><b>No cookies, trackers, or analytics.</b></li>
+        <li><b>No advertising.</b> No ads, and no use of your data for personalized or retargeted advertising.</li>
+        <li><b>No third-party sharing or sale of data.</b></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Limited Use (Chrome Web Store compliance)</h2>
+      <p>The limited data the extension handles is used solely to provide its user-facing tab-switching feature:</p>
+      <ul>
+        <li>Data is used and transferred only for the single purpose of the extension.</li>
+        <li>Data is not transferred to third parties except where necessary for the feature, to comply with law, for security, or in the event of a merger/acquisition/sale.</li>
+        <li>Data is never used or transferred for personalized, re-targeted, or interest-based advertising.</li>
+        <li>Data is never read by humans except with your consent, for security purposes, to comply with law, or in aggregated/anonymized internal operations.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>User control &amp; retention</h2>
+      <ul>
+        <li>All settings are managed on the options page and apply immediately.</li>
+        <li>Search history (last 20 entries) can be cleared with one click from the options page.</li>
+        <li>Thumbnail caches are held in session storage and are cleared automatically when the browser session ends.</li>
+        <li>Uninstalling the extension removes all data stored by it on your device.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Security</h2>
+      <p>
+        Because data stays on your device, there is no transmission to secure. The extension requests the narrowest set of permissions needed to function and uses standard browser storage APIs that are protected by your browser and operating system.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <p>If you have questions about this privacy policy or the extension, please open an issue or contact the developer via GitHub: <a href="https://github.com/lyuangg">github.com/lyuangg</a>.</p>
+    </section>
+  </div>
+
+  <!-- ============ 中文 ============ -->
+  <div lang="zh" id="zh">
+    <section class="card">
+      <h2>概述</h2>
+      <p>
+        SwiftTab 是一款浏览器标签页快速切换扩展,设计为完全在您的设备本地运行。
+        本隐私政策说明扩展会处理哪些数据、如何存储,以及您如何保持控制。
+        一句话总结:<b>SwiftTab 不收集、不上传、不出售、不共享任何个人数据。</b>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>扩展的用途</h2>
+      <p>SwiftTab 列出您打开的标签页,借助缩略图、搜索与快捷键让您快速切换。以上全部在您的浏览器本地完成。</p>
+      <h3>在本机处理的数据</h3>
+      <table>
+        <tr><th>数据</th><th>用途</th><th>存储位置</th></tr>
+        <tr><td>标签页标题、URL、图标、固定/激活状态</td><td>显示在切换面板中,便于识别并切换到目标标签</td><td>仅内存,不持久化</td></tr>
+        <tr><td>页面缩略图(可见标签的截图)</td><td>切换面板中的预览</td><td>内存 + <code>chrome.storage.session</code>,浏览器会话结束自动清空</td></tr>
+        <tr><td>书签(只读)</td><td>给已收藏的标签显示 ★ 星标</td><td>只读,不修改、不存储</td></tr>
+        <tr><td>最近关闭的标签会话</td><td>支持"恢复最近关闭的标签"功能</td><td>通过浏览器 sessions API 只读</td></tr>
+        <tr><td>用户设置(布局、主题、语言、Vim 模式等)</td><td>保存您的偏好设置</td><td><code>chrome.storage.sync</code></td></tr>
+        <tr><td>最近 20 条搜索记录</td><td>显示最近搜索;可在设置页随时清除</td><td><code>chrome.storage.local</code></td></tr>
+      </table>
+      <p class="muted">
+        <code>chrome.storage.sync</code> 遵循 Chrome 标准同步机制:若您开启了 Chrome 同步,设置可能经您的 Google 账号在您自己的设备间同步(与任何扩展一致)。设置不会发送到扩展开发者的服务器。
+      </p>
+    </section>
+
+    <section class="card no-collect">
+      <h2>扩展不会做的事</h2>
+      <ul>
+        <li><b>不收集个人信息。</b>SwiftTab 不收集您的姓名、邮箱或任何账户信息。</li>
+        <li><b>不记录浏览历史。</b>它只在切换面板显示时列出您当前打开的标签。</li>
+        <li><b>无网络请求。</b>扩展不会向开发者拥有的任何服务器发起请求。</li>
+        <li><b>无 Cookie、无跟踪器、无分析。</b></li>
+        <li><b>无广告。</b>不含广告,也不会将您的数据用于个性化或重定向广告。</li>
+        <li><b>不与第三方共享或出售数据。</b></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>有限使用声明(Chrome Web Store 合规)</h2>
+      <p>扩展处理的少量数据仅用于提供其面向用户的标签切换功能:</p>
+      <ul>
+        <li>数据仅用于扩展的单一用途,使用与传输范围以此为限。</li>
+        <li>除功能必需、遵守法律、安全保障或发生并购/资产出售外,不向第三方传输数据。</li>
+        <li>绝不用数据做个性化、重定向或兴趣广告。</li>
+        <li>除您同意、安全、守法或聚合匿名化内部运营外,数据不会被人工阅读。</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>用户控制与保留</h2>
+      <ul>
+        <li>全部设置在设置页管理,即时生效。</li>
+        <li>搜索历史(最近 20 条)可在设置页一键清除。</li>
+        <li>缩略图缓存存放于会话存储,浏览器会话结束自动清空。</li>
+        <li>卸载扩展会移除其在您设备上存储的全部数据。</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>安全</h2>
+      <p>
+        由于数据留在您的设备本地,不存在传输环节需要加密。扩展只申请实现功能所需的最小权限,并使用受您浏览器与操作系统保护的浏览器标准存储 API。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>联系方式</h2>
+      <p>如对本隐私政策或扩展有任何疑问,欢迎通过 GitHub 提交 issue 或联系开发者:<a href="https://github.com/lyuangg">github.com/lyuangg</a>。</p>
+    </section>
+  </div>
+</div>
+
+<script>
+  var btnEn = document.getElementById('btn-en');
+  var btnZh = document.getElementById('btn-zh');
+  var en = document.getElementById('en');
+  var zh = document.getElementById('zh');
+  var metaEn = document.getElementById('meta-en');
+  var metaZh = document.getElementById('meta-zh');
+  function setLang(lang) {
+    en.classList.toggle('active', lang === 'en');
+    zh.classList.toggle('active', lang === 'zh');
+    metaEn.classList.toggle('active', lang === 'en');
+    metaZh.classList.toggle('active', lang === 'zh');
+    btnEn.classList.toggle('active', lang === 'en');
+    btnZh.classList.toggle('active', lang === 'zh');
+    document.documentElement.lang = lang;
+    document.title = lang === 'en' ? 'SwiftTab Privacy Policy' : 'SwiftTab 隐私政策';
+    try { localStorage.setItem('swifttab-lang', lang); } catch (e) {}
+  }
+  btnEn.addEventListener('click', function () { setLang('en'); });
+  btnZh.addEventListener('click', function () { setLang('zh'); });
+  try {
+    var saved = localStorage.getItem('swifttab-lang');
+    if (saved === 'zh' || saved === 'en') setLang(saved);
+  } catch (e) {}
+</script>
+</body>
+</html>

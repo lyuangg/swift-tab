@@ -1,6 +1,6 @@
-# SwiftTab — Privacy Policy
+# SwiftTab
 
-Privacy policy for the SwiftTab browser extension, hosted on GitHub Pages.
+Landing page and privacy policy for the SwiftTab browser extension, hosted on GitHub Pages.
 
-- English: https://lyuangg.github.io/swift-tab/
-- 中文: https://lyuangg.github.io/swift-tab/
+- Landing / 介绍: https://lyuangg.github.io/swift-tab/
+- Privacy Policy / 隐私政策: https://lyuangg.github.io/swift-tab/privacy.html
